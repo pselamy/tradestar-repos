@@ -6,5 +6,5 @@ import com.verlumen.tradestar.protos.instruments.Instrument;
 import java.time.Instant;
 
 public interface InstrumentRepository {
-    Instrument get(String code);
+    Instrument get(String symbol);
 }

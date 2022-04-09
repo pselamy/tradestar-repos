@@ -1,4 +1,4 @@
-package com.verlumen.tradestar.candles.repositories;
+package com.verlumen.tradestar.repositories.candles;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Range;

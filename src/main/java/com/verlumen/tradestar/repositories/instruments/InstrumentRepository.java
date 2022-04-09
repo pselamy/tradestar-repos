@@ -1,4 +1,4 @@
-package com.verlumen.tradestar.candles.repositories;
+package com.verlumen.tradestar.repositories.instruments;
 
 
 import com.verlumen.tradestar.protos.instruments.Instrument;

@@ -1,5 +1,5 @@
 java_library(
-    name = "candle_repository",
+    name = "instrument_repository",
     srcs = ["InstrumentRepository.java"],
     visibility = ["//visibility:public"],
     deps = [

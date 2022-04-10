@@ -47,6 +47,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
+        "com.github.crazzyghost:alphavantage-java:1.6.2",
         "com.google.guava:guava:31.0.1-jre",
         "com.google.inject:guice:5.1.0",
     ],

@@ -28,6 +28,7 @@ java_library(
     deps = [
         ":alpha_vantage_candle_repository",
         ":candle_repository",
+        "@maven//:com_github_crazzyghost_alphavantage_java",
         "@maven//:com_google_inject_guice",
     ],
 )

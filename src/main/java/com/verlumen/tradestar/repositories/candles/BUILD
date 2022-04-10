@@ -19,3 +19,13 @@ java_library(
         "@tradestar_protos//:instruments_java_proto",
     ],
 )
+
+java_library(
+    name = "candle_repository_module",
+    srcs = ["CandleRepositoryModule.java"],
+    deps = [
+        ":alpha_vantage_candle_repository",
+        ":candle_repository",
+        "@maven//:com_google_inject_guice",
+    ],
+)

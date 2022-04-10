@@ -52,5 +52,6 @@ maven_install(
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
+        "https://jitpack.io",
     ],
 )

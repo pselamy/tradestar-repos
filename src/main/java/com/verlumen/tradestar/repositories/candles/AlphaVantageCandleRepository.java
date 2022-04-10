@@ -22,4 +22,18 @@ class AlphaVantageCandleRepository implements CandleRepository {
     public ImmutableSet<Candle> getCandles(Instrument instrument, Granularity granularity, Range<Instant> timeRange) {
         throw new UnsupportedOperationException();
     }
+
+    private static class StockApi {}
+
+    private static class ForexApi {}
+
+    private static class ExchangeRateApi {}
+
+    private static class CryptoApi {}
+
+    private static class IndicatorApi {}
+
+    private static class SectorApi {}
+
+    private static class FundamentalsApi {}
 }

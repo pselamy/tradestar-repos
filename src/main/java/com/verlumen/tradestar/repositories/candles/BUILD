@@ -23,6 +23,7 @@ java_library(
 java_library(
     name = "candle_repository_module",
     srcs = ["CandleRepositoryModule.java"],
+    visibility = ["//visibility:public"],
     deps = [
         ":alpha_vantage_candle_repository",
         ":candle_repository",

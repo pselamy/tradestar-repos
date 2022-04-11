@@ -13,8 +13,6 @@ import com.verlumen.tradestar.protos.instruments.Instrument;
 import java.time.Instant;
 import java.util.function.Function;
 
-import static com.crazzyghost.alphavantage.AlphaVantage.api;
-
 class AlphaVantageCandleRepository implements CandleRepository {
     private static final ImmutableMap<Instrument.Type,
             Function<AlphaVantage, Fetcher>> FETCHERS =
@@ -32,26 +30,14 @@ class AlphaVantageCandleRepository implements CandleRepository {
     private final AlphaVantage api;
 
     @Inject
-    AlphaVantageCandleRepository(Config config) {
-        AlphaVantage.api().init(config);
+    AlphaVantageCandleRepository(AlphaVantage api) {
+        this.api = api;
     }
 
     @Override
-    public ImmutableSet<Candle> getCandles(Instrument instrument, Granularity granularity, Range<Instant> timeRange) {
+    public ImmutableSet<Candle> getCandles(
+            Instrument instrument, Granularity granularity,
+            Range<Instant> timeRange) {
         throw new UnsupportedOperationException();
     }
-
-    private static class StockApi {}
-
-    private static class ForexApi {}
-
-    private static class ExchangeRateApi {}
-
-    private static class CryptoApi {}
-
-    private static class IndicatorApi {}
-
-    private static class SectorApi {}
-
-    private static class FundamentalsApi {}
 }

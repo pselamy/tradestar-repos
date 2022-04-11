@@ -1,5 +1,6 @@
 package com.verlumen.tradestar.repositories.candles;
 
+import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.Config;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -10,8 +11,7 @@ public class CandleRepositoryModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(CandleRepository.class).to(AlphaVantageCandleRepository.class)
-                .in(Singleton.class);
+        bind(CandleRepository.class).to(AlphaVantageCandleRepository.class);
     }
 
     @Provides
@@ -20,6 +20,14 @@ public class CandleRepositoryModule extends AbstractModule {
                 .key(alphaVantageKey())
                 .timeOut(10)
                 .build();
+    }
+
+    @Provides
+    @Singleton
+    AlphaVantage provideAlphaVantage(Config config) {
+        AlphaVantage alphaVantage = AlphaVantage.api();
+        alphaVantage.init(config);
+        return alphaVantage;
     }
 
     private String alphaVantageKey() {

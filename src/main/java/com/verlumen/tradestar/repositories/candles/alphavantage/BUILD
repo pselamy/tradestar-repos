@@ -2,6 +2,7 @@ java_library(
     name = "alpha_vantage_candle_repository",
     srcs = ["AlphaVantageCandleRepository.java"],
     deps = [
+        ":candle_fetcher",
         "//src/main/java/com/verlumen/tradestar/repositories/candles:candle_repository",
         "@maven//:com_google_guava_guava",
         "@maven//:com_google_inject_guice",
